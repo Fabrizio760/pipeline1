@@ -1,0 +1,6 @@
+
+public enum Tipo {
+	
+	AUTOMOVIL, AVION, MOTOCICLETA, BICICLETA, CAMION
+	
+}
