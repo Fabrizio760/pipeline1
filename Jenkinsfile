@@ -1,26 +1,32 @@
 pipeline {
     agent any
-    tools{
-    maven 'maven3.6'
-    jdk 'jdk11'
-    }
+
     stages {
-        stage('Compilar') {
+        stage ('Compile Stage') {
+
             steps {
-                	sh 'mvn clean compile'
+                withMaven(maven : 'maven3.6') {
+                    sh 'mvn clean compile'
                 }
             }
-        
-        stage('Testing') {
+        }
+
+        stage ('Testing Stage') {
+
             steps {
-                	sh 'mvn test'
+                withMaven(maven : 'maven3.6') {
+                    sh 'mvn test'
+                }
             }
-          }
-        
-        stage('Deployar') {
+        }
+
+
+        stage ('Deployment Stage') {
             steps {
-                	sh 'mvn deploy'
+                withMaven(maven : 'maven3.6') {
+                    sh 'mvn deploy'
+                }
             }
         }
     }
-  }
+}
