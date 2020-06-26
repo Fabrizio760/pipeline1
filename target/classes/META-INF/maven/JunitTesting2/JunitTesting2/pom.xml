@@ -45,12 +45,12 @@
 
 	</dependencies>
 
-	<!--<repositories>
+	<repositories>
 		<repository>
 			<id>myMavenRepo.read</id>
-			<url>https://github.com/Fabrizio760/pipeline1</url>
+			<url>https://mymavenrepo.com/repo/6B8FEuwJ2MpGOt9BlANK/</url>
 		</repository>
-	</repositories>-->
+	</repositories>
 
 	<distributionManagement>
 		<repository>
