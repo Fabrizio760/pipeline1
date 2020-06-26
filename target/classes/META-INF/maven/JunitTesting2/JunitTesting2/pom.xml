@@ -1,59 +1,61 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>JunitTesting2</groupId>
-  <artifactId>JunitTesting2</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  <properties>
-  <junit.jupiter.version>5.0.0-M3</junit.jupiter.version>
-        <junit.platform.version>1.0.0-M3</junit.platform.version>
-  </properties>
-  <build>
-    <sourceDirectory>src</sourceDirectory>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
-        <configuration>
-          <release>11</release>
-        </configuration>
-        <dependencies>
-                    <dependency>
-                        <groupId>org.junit.platform</groupId>
-                        <artifactId>junit-platform-surefire-provider</artifactId>
-                        <version>1.0.0-M3</version>
-                    </dependency>
-                </dependencies>
-      </plugin>
-    </plugins>
-  </build>
-  <dependencies>
-    
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.0.0-M3</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-runner</artifactId>
-            <version>${junit.platform.version}</version>
-        </dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>JunitTesting2</groupId>
+	<artifactId>JunitTesting2</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 
-    </dependencies>
-    
-    <repositories>
-        <repository>
-            <id>myMavenRepo.read</id>
-            <url>https://github.com/Fabrizio760/pipeline1</url>
-        </repository>
-    </repositories>
+	<properties>
+		<junit.jupiter.version>5.0.0-M3</junit.jupiter.version>
+		<junit.platform.version>1.0.0-M3</junit.platform.version>
+	</properties>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<release>11</release>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-surefire-provider</artifactId>
+						<version>1.0.0-M3</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
 
-    <distributionManagement>
-        <repository>
-            <id>myMavenRepo.write</id>
-            <url>https://github.com/Fabrizio760/pipeline1</url>
-        </repository>
-    </distributionManagement>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.0.0-M3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-runner</artifactId>
+			<version>${junit.platform.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>myMavenRepo.read</id>
+			<url>https://github.com/Fabrizio760/pipeline1</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>myMavenRepo.write</id>
+			<url>https://github.com/Fabrizio760/pipeline1</url>
+		</repository>
+	</distributionManagement>
 </project>
