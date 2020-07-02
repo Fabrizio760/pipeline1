@@ -12,7 +12,7 @@ pipeline {
 
             steps {
             		echo 'Compilando el proyecto'
-                    bat 'mvn compile'
+                    bat 'mvn clean compile'
                 }
             }
         
@@ -21,7 +21,7 @@ pipeline {
 
             steps {
             		echo 'Ejecutando los tests'
-                    bat 'mvn test'
+                    bat 'mvn clean test'
                 }
             }
         
@@ -30,7 +30,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
             		echo 'Deployando proyecto'
-                    bat 'mvn deploy'
+                    bat 'mvn clean deploy'
                 }
             
         }
